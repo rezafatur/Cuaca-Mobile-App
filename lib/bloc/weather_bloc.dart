@@ -11,7 +11,9 @@ class WeatherBloc extends Bloc<WeatherEvent, WeatherState> {
   WeatherBloc() : super(WeatherInitial()) {
     on<FetchWeather>(
       (event, emit) async {
-        emit(WeatherLoading());
+        emit(
+          WeatherLoading(),
+        );
         try {
           WeatherFactory wf = WeatherFactory(
             API_KEY,

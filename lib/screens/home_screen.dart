@@ -166,7 +166,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   physics: const NeverScrollableScrollPhysics(),
                   child: Stack(
                     children: [
-                      // Section gradasi
+                      // Section - gradataion
                       Center(
                         child: Column(
                           children: [
@@ -190,7 +190,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
 
-                      // Section filter blur untuk background
+                      // Section - blur background
                       BackdropFilter(
                         filter: ImageFilter.blur(
                           sigmaX: 100.0,
@@ -203,7 +203,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
 
-                      // Bagian utama
+                      // Section - main feature
                       SizedBox(
                         width: MediaQuery.of(context).size.width,
                         child: Column(
@@ -299,7 +299,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               height: 20,
                             ),
 
-                            // Bagian matahari terbit dan matahari terbenam
+                            // Section - sunset and sunrise
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
@@ -456,7 +456,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               height: 20,
                             ),
 
-                            // Bagian temperatur maksimum dan temperatur minimum
+                            // Section - temperature maximum and minimum
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
@@ -587,7 +587,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               height: 20,
                             ),
 
-                            // Bagian kecepatan angin dan keadaan mendung
+                            // Section - wind speed and cloudiness
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
@@ -718,7 +718,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               height: 20,
                             ),
 
-                            // Bagian kelembaban dan tekanan
+                            // Section - humidity and pressure
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [

@@ -166,7 +166,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   physics: const NeverScrollableScrollPhysics(),
                   child: Stack(
                     children: [
-                      // Section - gradataion
+                      // Section - gradation
                       Center(
                         child: Column(
                           children: [
@@ -209,6 +209,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
+                            // Section - area name
                             Text(
                               "📍 ${state.weather.areaName}",
                               style: const TextStyle(
@@ -219,6 +220,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             const SizedBox(
                               height: 8,
                             ),
+
+                            // Section - greetings
                             Text(
                               getGreeting(),
                               style: const TextStyle(
@@ -227,11 +230,24 @@ class _HomeScreenState extends State<HomeScreen> {
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
+                            const SizedBox(
+                              height: 60,
+                            ),
+
+                            // Section - weather image
                             Center(
-                              child: getWeatherIcon(
-                                state.weather.weatherConditionCode!,
+                              child: SizedBox(
+                                width: MediaQuery.of(context).size.width / 1.5,
+                                child: getWeatherIcon(
+                                  state.weather.weatherConditionCode!,
+                                ),
                               ),
                             ),
+                            const SizedBox(
+                              height: 60,
+                            ),
+
+                            // Section - temperature
                             Center(
                               child: Text(
                                 "${state.weather.temperature!.celsius!.round()}°C",
@@ -242,6 +258,11 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                               ),
                             ),
+                            const SizedBox(
+                              height: 8,
+                            ),
+
+                            // Section - weather description
                             Center(
                               child: Text(
                                 state.weather.weatherDescription!.toUpperCase(),
@@ -253,10 +274,10 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                             ),
                             const SizedBox(
-                              height: 5,
+                              height: 8,
                             ),
 
-                            // Nama hari, tanggal, bulan, dan jam, serta menit terakhir prediksi cuaca
+                            // Section - day, date, and time
                             Center(
                               child: RichText(
                                 textAlign: TextAlign.center,
@@ -296,7 +317,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                             ),
                             const SizedBox(
-                              height: 20,
+                              height: 40,
                             ),
 
                             // Section - sunset and sunrise
@@ -323,10 +344,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                         children: [
                                           Image.asset(
                                             "assets/sunrise.png",
-                                            scale: 10,
+                                            scale: 15,
                                           ),
                                           const SizedBox(
-                                            height: 5,
+                                            height: 8,
                                           ),
                                           Column(
                                             children: [
@@ -346,7 +367,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 ),
                                               ),
                                               const SizedBox(
-                                                height: 5,
+                                                height: 8,
                                               ),
                                               RichText(
                                                 textAlign: TextAlign.center,
@@ -399,10 +420,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                         children: [
                                           Image.asset(
                                             "assets/sunset.png",
-                                            scale: 10,
+                                            scale: 15,
                                           ),
                                           const SizedBox(
-                                            height: 5,
+                                            height: 8,
                                           ),
                                           Column(
                                             children: [
@@ -422,7 +443,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 ),
                                               ),
                                               const SizedBox(
-                                                height: 5,
+                                                height: 8,
                                               ),
                                               RichText(
                                                 textAlign: TextAlign.center,
@@ -480,10 +501,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                         children: [
                                           Image.asset(
                                             "assets/tempMax.png",
-                                            scale: 10,
+                                            scale: 15,
                                           ),
                                           const SizedBox(
-                                            height: 5,
+                                            height: 8,
                                           ),
                                           Column(
                                             children: [
@@ -503,7 +524,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 ),
                                               ),
                                               const SizedBox(
-                                                height: 5,
+                                                height: 8,
                                               ),
                                               Text(
                                                 "${state.weather.tempMax!.celsius!.round()}°C",
@@ -542,10 +563,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                         children: [
                                           Image.asset(
                                             "assets/tempMin.png",
-                                            scale: 10,
+                                            scale: 15,
                                           ),
                                           const SizedBox(
-                                            height: 5,
+                                            height: 8,
                                           ),
                                           Column(
                                             children: [
@@ -565,7 +586,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 ),
                                               ),
                                               const SizedBox(
-                                                height: 5,
+                                                height: 8,
                                               ),
                                               Text(
                                                 "${state.weather.tempMin!.celsius!.round()}°C",
@@ -610,11 +631,11 @@ class _HomeScreenState extends State<HomeScreen> {
                                             CrossAxisAlignment.center,
                                         children: [
                                           Image.asset(
-                                            "assets/sunrise.png",
-                                            scale: 10,
+                                            "assets/windSpeed.png",
+                                            scale: 15,
                                           ),
                                           const SizedBox(
-                                            height: 5,
+                                            height: 8,
                                           ),
                                           Column(
                                             children: [
@@ -634,7 +655,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 ),
                                               ),
                                               const SizedBox(
-                                                height: 5,
+                                                height: 8,
                                               ),
                                               Text(
                                                 "${state.weather.windSpeed.toString()} meter/detik",
@@ -672,11 +693,11 @@ class _HomeScreenState extends State<HomeScreen> {
                                             CrossAxisAlignment.center,
                                         children: [
                                           Image.asset(
-                                            "assets/sunset.png",
-                                            scale: 10,
+                                            "assets/cloudiness.png",
+                                            scale: 15,
                                           ),
                                           const SizedBox(
-                                            height: 5,
+                                            height: 8,
                                           ),
                                           Column(
                                             children: [
@@ -696,7 +717,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 ),
                                               ),
                                               const SizedBox(
-                                                height: 5,
+                                                height: 8,
                                               ),
                                               Text(
                                                 "${state.weather.cloudiness!.round()}%",
@@ -741,11 +762,11 @@ class _HomeScreenState extends State<HomeScreen> {
                                             CrossAxisAlignment.center,
                                         children: [
                                           Image.asset(
-                                            "assets/sunrise.png",
-                                            scale: 10,
+                                            "assets/humidity.png",
+                                            scale: 15,
                                           ),
                                           const SizedBox(
-                                            height: 5,
+                                            height: 8,
                                           ),
                                           Column(
                                             children: [
@@ -760,7 +781,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 ),
                                               ),
                                               const SizedBox(
-                                                height: 5,
+                                                height: 8,
                                               ),
                                               Text(
                                                 "${state.weather.humidity!.round()}%",
@@ -798,11 +819,11 @@ class _HomeScreenState extends State<HomeScreen> {
                                             CrossAxisAlignment.center,
                                         children: [
                                           Image.asset(
-                                            "assets/sunset.png",
-                                            scale: 10,
+                                            "assets/pressure.png",
+                                            scale: 15,
                                           ),
                                           const SizedBox(
-                                            height: 5,
+                                            height: 8,
                                           ),
                                           Column(
                                             children: [
@@ -817,7 +838,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 ),
                                               ),
                                               const SizedBox(
-                                                height: 5,
+                                                height: 8,
                                               ),
                                               Text(
                                                 "${state.weather.pressure!.round()} hPa",
@@ -835,6 +856,19 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                               ],
                             ),
+                            const SizedBox(
+                              height: 40,
+                            ),
+                            const Center(
+                              child: Text(
+                                "Cuaca - MRF Projetcs",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            )
                           ],
                         ),
                       ),

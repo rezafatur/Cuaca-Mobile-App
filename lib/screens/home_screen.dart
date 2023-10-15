@@ -859,6 +859,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             const SizedBox(
                               height: 40,
                             ),
+
+                            // Section - footer
                             const Center(
                               child: Text(
                                 "Cuaca - MRF Projetcs",
@@ -868,7 +870,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
-                            )
+                            ),
                           ],
                         ),
                       ),

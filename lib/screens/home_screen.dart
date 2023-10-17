@@ -166,7 +166,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   physics: const NeverScrollableScrollPhysics(),
                   child: Stack(
                     children: [
-                      // Section - gradation
+                      // section - gradation
                       Center(
                         child: Column(
                           children: [
@@ -190,7 +190,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
 
-                      // Section - blur background
+                      // section - blur background
                       BackdropFilter(
                         filter: ImageFilter.blur(
                           sigmaX: 100.0,
@@ -203,13 +203,13 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
 
-                      // Section - main feature
+                      // section - main feature
                       SizedBox(
                         width: MediaQuery.of(context).size.width,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            // Section - area name
+                            // section - area name
                             Text(
                               "📍 ${state.weather.areaName}",
                               style: const TextStyle(
@@ -221,7 +221,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               height: 8,
                             ),
 
-                            // Section - greetings
+                            // section - greetings
                             Text(
                               getGreeting(),
                               style: const TextStyle(
@@ -234,7 +234,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               height: 60,
                             ),
 
-                            // Section - weather image
+                            // section - weather image
                             Center(
                               child: SizedBox(
                                 width: MediaQuery.of(context).size.width / 1.5,
@@ -247,7 +247,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               height: 60,
                             ),
 
-                            // Section - temperature
+                            // section - temperature
                             Center(
                               child: Text(
                                 "${state.weather.temperature!.celsius!.round()}°C",
@@ -262,7 +262,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               height: 8,
                             ),
 
-                            // Section - weather description
+                            // section - weather description
                             Center(
                               child: Text(
                                 state.weather.weatherDescription!.toUpperCase(),
@@ -277,7 +277,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               height: 8,
                             ),
 
-                            // Section - day, date, and time
+                            // section - day, date, and time
                             Center(
                               child: RichText(
                                 textAlign: TextAlign.center,
@@ -320,7 +320,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               height: 40,
                             ),
 
-                            // Section - sunset and sunrise
+                            // section - sunset and sunrise
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
@@ -477,7 +477,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               height: 20,
                             ),
 
-                            // Section - temperature maximum and minimum
+                            // section - temperature maximum and minimum
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
@@ -608,7 +608,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               height: 20,
                             ),
 
-                            // Section - wind speed and cloudiness
+                            // section - wind speed and cloudiness
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
@@ -739,7 +739,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               height: 20,
                             ),
 
-                            // Section - humidity and pressure
+                            // section - humidity and pressure
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
@@ -860,7 +860,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               height: 40,
                             ),
 
-                            // Section - footer
+                            // section - footer
                             const Center(
                               child: Text(
                                 "Cuaca - MRF Projetcs",

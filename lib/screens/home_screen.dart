@@ -256,6 +256,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   fontSize: 55,
                                   fontWeight: FontWeight.w600,
                                 ),
+                                textAlign: TextAlign.center,
                               ),
                             ),
                             const SizedBox(
